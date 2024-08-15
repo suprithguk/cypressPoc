@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "cypress": "^13.13.1",
+    "cypress-xpath": "^2.0.1",
+    "D": "^1.0.0",
+    "save-dev": "^0.0.1-security"
+  },
+  "name": "cypresspoc",
+  "version": "1.0.0",
+  "description": "Automating test cases in Cypress and Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "nearform",
+    "javascript",
+    "poc",
+    "tutorial"
+  ],
+  "author": "Suprith Gangawar",
+  "license": "ISC"
+}
