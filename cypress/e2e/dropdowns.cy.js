@@ -23,7 +23,7 @@ describe('Working with dropdowns', () => {
     })
     it('auto suggested drop downs', () => {
         cy.visit('https://www.google.com')
-        cy.get('input[name='q']').type('Cypress')
+        cy.get("input[name='q']").type('Cypress')
         cy.get('div.wM6W7d>span').each(($el, index, $list) =>{
             
         })
