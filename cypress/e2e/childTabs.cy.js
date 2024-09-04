@@ -2,7 +2,7 @@ describe('Child Tabs', () => {
     beforeEach('Setting the dimensions', () => {
         cy.visit('https://the-internet.herokuapp.com/windows')
         //cy.viewport(1280, 720)
-        cy.viewport('iphone-5')
+        //cy.viewport('iphone-5')
     })
     //approach 1
     it('Remove web attribute in runtime', () => {

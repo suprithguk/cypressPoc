@@ -23,10 +23,29 @@ describe('Working with tables', () => {
         })
     })
     it.only('Pagination', () => {
+        let totalPages
         cy.get('.col-sm-6.text-end').then((var1) => {
             let myText = var1.text()
             totalPages = myText.substring(myText.indexOf("(")+1, myText.indexOf("Pages")-1)
             cy.log("Total no.of pages ="+totalPages)
         })
+
+        for(p=1;p<=totalPages;p++)
+        {
+            if(p>1)
+            {
+                cy.log("Active page: "+p)
+                cy.get('ul[class="pagination"]>li:nth-child('+p+')').click()
+                cy.get('table[class="table table-bordered table-hover"]>tbody>tr')
+                .each(($row, index, $rows) => {
+                    cy.wrap($row).within(
+                        cy.get('td:nth-child(3)').then((var2) => {
+                            cy.log(var2.text())
+                    })
+                )
+            })
+            }
+            
+        }
     })
 })
